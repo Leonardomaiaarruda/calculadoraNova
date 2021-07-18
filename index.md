@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -33,13 +32,32 @@
                         <h2>Peso</h2>
                         <input type="text" placeholder="Ex:76" id="peso">
                     </label>
+                    
+                    <div id="selecaoAtividades">
+                        
+                    </div>
 
                     <button class="botao">Resultado</button>
        </section>
     </form>
-    <div class="resultado"> <h3>--</h3></div>
+
+    <div class="resultado"> 
+        <div class="grid-tree"> 
+            <div class="grid"></div>
+            <div class="grid2"></div>
+            <div class="grid3"></div>
+
+        </div>
+    </div>
     <button class="fechar" data-fechar="fechar"> X </button>
 
-    <script src="js/script.js"></script>
+    <script type="module" src="js/script.js"></script>
 </body>
 </html>
+
+<!--
+
+      
+
+                  
+-->
