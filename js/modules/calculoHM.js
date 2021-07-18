@@ -74,8 +74,39 @@ export default function calculo(){
         if(peso !== '' && altura !== '' && peso !== ''){
             resultado.classList.add('active')
             fechar.classList.add('active')
-            resultado.innerHTML = `<div> Seu gasto calorico está em média <h2 class="somaFinal">${somaFinal.toFixed(2)}</h2> calorias diária </br></br>
-            Lembrando que para ter um número mais exato você teria que passar com um profissional da área </div>`;
+                grid.innerHTML = `
+                    <div class="pergunta"> <h2>Em qual nivel de atividade você se encontra?</h2></div>
+                    <div class="grid1">
+                        <div class="enquadrando">
+                            <h2>Sedentario </h2>
+                            <p>as calorias ingeridas por dia serão</p>
+                            <p>Perca de peso ${(somaFinal - 500).toFixed(2)} kg  </p>
+                            <p>Manter Peso ${(somaFinal + 400).toFixed(2)} kg </p>
+                            <p>Ganhar Massa ${(somaFinal + 600).toFixed(2)} kg </br></p>
+                        </div>
+                    </div>`;
+
+                grid2.innerHTML = `
+                    <div class="grid2">
+                        <div class="enquadrando">
+                            <h2>Atividade Moderada</h2>
+                            <p>as calorias ingeridas por dia serão</p>
+                            <p>Perca de peso ${((somaFinal + 300) - 500).toFixed(2)} kg  </p>
+                            <p>Manter Peso ${((somaFinal + 300 ) + 500).toFixed(2)} kg </p>
+                            <p>Ganhar Massa ${((somaFinal + 300 ) + 800).toFixed(2)} kg </br></p>
+                        </div>
+                    </div>`;
+
+                grid3.innerHTML = `
+                    <div class="grid3">
+                        <div class="enquadrando">
+                            <h2>Atividade Intensa</h2>
+                            <p>as calorias ingeridas por dia serão</p>
+                            <p>Perca de peso ${((somaFinal + 600) - 500).toFixed(2)} kg  </p>
+                            <p>Manter Peso ${((somaFinal + 600 ) + 500).toFixed(2)} kg </p>
+                            <p>Ganhar Massa ${((somaFinal + 600 ) + 800).toFixed(2)} kg </br></p>
+                        </div>
+                    </div>`;
         }
     }
 
